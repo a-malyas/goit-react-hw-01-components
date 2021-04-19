@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "gh-pages": "^3.1.0",
     "modern-normalize": "^1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -16,7 +17,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    
   },
   "eslintConfig": {
     "extends": [
@@ -36,6 +40,7 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "https://a-malyas.github.io/goit-react-hw-01-components",
   "devDependencies": {
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
