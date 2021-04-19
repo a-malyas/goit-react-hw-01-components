@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from './components/user_profile/Profile';
+import Profile from './components/profile/Profile';
 import Statistics from './components/statistics/Statistics';
 import FriendList from './components/friendList/FriendList';
 import TransactionHistory from './components/transaction/TransactionHistory';
@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="profile1">
+    <div>
       <Profile
         avatar = {user.avatar}
         name={user.name}
@@ -22,16 +22,16 @@ function App() {
         likes = {user.stats.likes}
       />
 
-      <div>
+      <div className="box">
         <Statistics title="Upload stats" stats={statisticDatas} />
       </div>
 
-      <div>
+      <div className="box">
         <FriendList friends={friendDatas} />
       </div>
 
-      <div>
-        <TransactionHistory items={transactions} />;
+      <div className="box">
+        <TransactionHistory items={transactions} />
       </div>
     </div>
   );
